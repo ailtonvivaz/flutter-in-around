@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_in_around/src/group_page.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -6,12 +7,17 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-
   int _selectedIndex = 0;
+  List<Widget> _tabbarPages = <Widget>[
+    Text('Feed'),
+    GroupPage(),
+    Text('Events'),
+  ];
 
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
+
     });
   }
 
@@ -27,6 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
           )
         ],
       ),
+      body: _tabbarPages.elementAt(_selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(
