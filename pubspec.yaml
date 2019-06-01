@@ -20,8 +20,9 @@ dependencies:
   flutter:
     sdk: flutter
 
-  firebase_core: ^0.2.5  # add dependency for Firebase Core
+  firebase_core: ^0.3.0  # add dependency for Firebase Core
   firebase_analytics: ^1.0.4  # add dependency for Google Analytics for Firebase
+  cloud_firestore: ^0.9.0
 
 dev_dependencies:
   flutter_test:
